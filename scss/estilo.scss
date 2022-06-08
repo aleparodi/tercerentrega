@@ -1,0 +1,316 @@
+@import "variable";
+@import "maps";
+@import "extend";
+@import "mixin";
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.fuente {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5rem;
+    text-align: center;
+    color: $color_texto;
+}
+.colorNav{
+    background-image: linear-gradient(to top, #86878b, #5a5e60);
+}
+
+.logo {
+    margin-left: 20px;
+}
+.botonCarrito {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 5px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    color: #fff;
+    background-image: linear-gradient(to right, #3fbbc0, #0083B0);
+}
+
+.botonCarrito:hover {
+    transform: translateY(-3px);
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .8s;
+}
+
+
+.botonCarrito:active{
+    transform:translateY(3px);
+}
+
+.botonNav:hover {
+     filter:invert(100%) ;
+}
+
+
+body{
+    background-color: rgb(126, 195, 197);
+}
+
+
+/* SECCION SERVICIOS */
+.contenedor {
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: double 6px #99A799;
+    border-radius: 4px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+}
+
+
+.imagenEncabezado {
+   width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+ }
+
+.imagenGaleria {
+    height: 200px;
+    width: 90%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.imagenGaleria:hover {
+    filter: grayscale(100%);
+    
+}
+
+.imagenContenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+}
+
+/* SECCION FOOTER */
+
+footer {
+    background-color: #FEF5ED;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+    font-size: small;
+    text-align: center;
+}
+
+footer ul li {
+    list-style-type: none;
+    font-size: small;
+    
+}
+
+footer ul li a {
+    margin-left: 5px;
+    margin-top: 15px;
+   text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+footer h4 {
+    color: $color_texto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+    font-size: small;
+}
+
+/* BOTON DE WHATSAPP */
+
+.botonWhatsApp img {
+    width: 70px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.empresaNuestra {
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: double 6px #36136b;
+    border-radius: 4px;
+}
+
+header {
+    grid-area: inicio;
+  position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.contenedorImagen {
+    grid-area: imagenCentral;
+}
+
+#servicios {
+    grid-area: servicios;
+}
+
+#galeria {
+    grid-area: galeria;
+}
+ 
+#footer {
+    grid-area: footer;
+}
+@media screen and (max-width: 900px) {
+    .botonera ul li a{
+        display: none;
+    }
+    .imagenContenedor{
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    footer ul li a{
+        display: none;
+    }
+     .botonWhatsApp img{
+    width: 40px;
+    } 
+}
+.container{
+    width:100%;
+    display: flex;
+    max-width: 1100px;
+}
+.card{
+     border-radius: 6px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    padding: 10px;
+    margin-top: 20px;
+ 
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: $color_texto;
+}
+.card .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.card .contenido a{
+    text-decoration: none;
+    display:inline-block;
+    padding: 10px;
+    margin-top: 10px;
+  color:#2fb4cc;
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background: #2fb4cc;
+    color: #fff;
+}
+
+.formContacto{
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 10px;
+   background: rgba(0,0,0,0.1) ;
+}
+.cabezal{
+width: 100%;
+display: flex;
+background-color: #2fb4cc;
+}
+.textoCabezal{
+    font-size: 30px;
+    display: block;
+    text-align: center ;
+    padding: 2.5rem ;
+}
+.contact{
+    padding: .8rem;
+    overflow: hidden;
+    color: #0083B0;
+}
+.contact label, .contact input, .contact textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.contact label{
+    font-weight: 700;
+}
+.contact input:not([type=submit], [type=reset]), .contact textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #0083B0;
+    margin-bottom: 10px;
+    font: size 20px;
+    outline: none;
+    color:gray ;
+}
+.contact textarea{
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%;
+}
+input[type=submit], input[type=reset]{
+    padding:10px;
+    border: none;
+    background-color:#2fb4cc;
+    color: white;
+    font-size: 20px;
+ }
+
+ input[type=submit]:hover, input[type=reset]:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+ }
+ 
+@media screen and (max-width: 480px){
+   .formContacto{
+        width: 100%;
+    }
+}

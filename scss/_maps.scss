@@ -1,0 +1,10 @@
+$estilo:(texto:center,colores: #473ba1,margent: 25px,
+margenb: 25px,tamaño:2rem );
+.textoAlineado {
+       text-align: map-get($estilo,texto);
+       color: map-get($estilo,colores);
+       margin-top: map-get($estilo,margent);
+       margin-bottom: map-get($estilo,margenb);
+       font-size:map-get($estilo,tamaño);
+       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

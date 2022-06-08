@@ -1,0 +1,7 @@
+@mixin estiloBoton ($deco,$alinea){
+    text-decoration:$deco;
+    text-align: $alinea;
+}
+.botonNav {
+    @include estiloBoton(none,center)
+}  

@@ -1,0 +1,8 @@
+.contenedorH{
+    margin-top: 15 px;
+    margin-bottom: 15px;
+}
+.contenedorP{
+    @extend .contenedorH;
+    font-size:20px ;
+}
